@@ -32,8 +32,8 @@
       <style id="holderjs-style" type="text/css"></style></head>
 
       <body>
-
         <div class="navbar navbar-inverse navbar-fixed-top" id="top-navbar" role="navigation">
+          <!--<div class="container-fluid">-->
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,22 +46,39 @@
             </div>
             <div class="navbar-collapse collapse" style="height: 1px;">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                <li><a href=""><i class="glyphicon glyphicon-user"></i> </a></li>
+                <!--<li><a href="#postModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i> Post</a></li>-->
+                <li><a href=""><i class="glyphicon glyphicon-comment"></i> </a></li>
+                <li><a href="#"> <i class="glyphicon glyphicon-cog"></i> </a></li>
+                <!--<li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>-->
               </ul>
+              <!--
               <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Search...">
               </form>
+            -->
+              <form class="navbar-form navbar-left">
+                <div class="input-group input-group-sm" style="max-width:360px;">
+                    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                          <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+              </form>
+
             </div>
           </div>
         </div>
-
+        <!--<div class="container-fluid">-->
         <div class="container">
           <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar sidebar-inner">
-            <!--<div class="col-sm-3 col-md-2 sidebar-inner">-->
+            <!--<div id="sidebar" class="col-sm-3 col-md-2 sidebar-inner">-->
+            <!--<div class="col-sm-3 col-md-2 sidebar sidebar-inner">-->
+            <div class="col-sm-3 col-md-2 sidebar-inner">
 
 
               <!-- User Session -->
@@ -84,10 +101,10 @@
 
 
               <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
+                <li class="active"><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Fit Feed</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Message</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-calendar"></i> Events</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-camera"></i> Photos</a></li>
               </ul>
               <ul class="nav nav-sidebar">
                 <li><a href="">Nav item</a></li>
@@ -102,8 +119,8 @@
                 <li><a href="">Another nav item</a></li>
               </ul>
             </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <!--<div class="col-sm-9 col-md-10 main">-->
+            <!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">-->
+            <div class="col-sm-9 col-md-10 main">
               <h1 class="page-header">Dashboard</h1>
 <!--
               <div class="row placeholders">
@@ -130,6 +147,7 @@
               </div>
               -->
               <h2 class="sub-header">Section title</h2>
+              <!--
               <div class="table-responsive">
                 <table class="table table-striped">
                   <thead>
@@ -257,6 +275,7 @@
                   </tbody>
                 </table>
               </div>
+              -->
             </div>
           </div>
         </div>
@@ -267,6 +286,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="assets/js/docs.min.js"></script>
+    <!--
+    <script>
+      $('#sidebar').affix({
+        offset: {
+          top: 245
+        }
+      });
 
+      var $body   = $(document.body);
+      var navHeight = $('.navbar').outerHeight(true) + 10;
+
+      $body.scrollspy({
+        target: '#leftCol',
+        offset: navHeight
+      });
+    </script>
+    -->
 
   </body></html>
